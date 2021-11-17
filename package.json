@@ -1,0 +1,23 @@
+{
+  "name": "coding-game-js",
+  "version": "1.0.0",
+  "description": "Résolution des entrainements coding game en js",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrienWac/coding-game-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrienWac/coding-game-js/issues"
+  },
+  "homepage": "https://github.com/AdrienWac/coding-game-js#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "jest": "^27.3.1"
+  }
+}
