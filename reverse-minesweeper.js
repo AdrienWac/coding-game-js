@@ -1,18 +1,3 @@
-// Create array input => Créer le tableau d'entrée à partir de l'input
-// Créer array output = copy de array input à l'init => Créer le tableau de sortie
-    // On parcourt chaque case
-        // On recherche et stocke les coordonnées des mines
-        // Si pas mine
-            // On met à jour sa valeur final avec un point
-        // Si mine
-            // On met à jour sa valeur final avec un .
-            // On parcourt ses voisons pour ajuster en +1 la valeur final
-                // Si voisin est une coordonnée de bombes => on change pas
-                // Si valeur final est point => ça devient 1
-                // Si valeur final est un nombre => ça devient valeur final + 1
-        
-                
-// backupMinePosition = []; INUTILE ?
 // outputMap = inputMap
 // On parcourt les lignes de inputMap
     // if indexOf(row) === -1 => aucune mine sur la ligne
@@ -20,7 +5,6 @@
     // else 
         // extractMinesPositionInRow(row)
         // Pour chaque position de mine dans la ligne courante
-            // addMinePositionInBackup(row, col) INUTILE ?
             // outputMap[row][col] = '.' => Mise à jour de la mine
             // setNeighboor(x, y, outputMap) => Mise à jour des voisins de la mine
     
@@ -40,6 +24,7 @@
 // setValue(x, y, map)
     // map[x][y] = map[x][y] === '.' ? 1 : map[x][y] + 1;
     // return map
+
 const helpers = require('./helpers/helpers');
 const game = {};
 const MINE_SYMBOL = 'x';
