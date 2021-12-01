@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest reverse-minesweeper",
-    "test:debug": "./node_modules/.bin/jest reverse-minesweeper --runInBand"
+    "test:helpers": "./node_modules/.bin/jest helpers --runInBand",
+    "test:reverseMinesweeper": "./node_modules/.bin/jest -t=\"Display the grid as it appears if you win the game\" --runInBand"
 
   },
   "repository": {
