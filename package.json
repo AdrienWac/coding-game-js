@@ -4,7 +4,9 @@
   "description": "Résolution des entrainements coding game en js",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest reverse-minesweeper",
+    "test:debug": "./node_modules/.bin/jest reverse-minesweeper --runInBand"
+
   },
   "repository": {
     "type": "git",
