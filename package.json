@@ -6,7 +6,8 @@
   "scripts": {
     "test": "./node_modules/.bin/jest reverse-minesweeper",
     "test:helpers": "./node_modules/.bin/jest helpers --runInBand",
-    "test:reverseMinesweeper": "./node_modules/.bin/jest -t=\"Display the grid as it appears if you win the game\" --runInBand"
+    "test:reverseMinesweeper": "./node_modules/.bin/jest -t=\"Display the grid as it appears if you win the game\" --runInBand",
+    "test:offsetArrays": "./node_modules/.bin/jest offset-arrays -t=\"Parsing array expression\" --runInBand"
 
   },
   "repository": {
