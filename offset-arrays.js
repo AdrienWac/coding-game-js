@@ -13,8 +13,6 @@
 
     
 
-const helpers = require('./helpers/helpers');
-
 const game = {};
 
 game.createArrayDefinitions = (arrayExpressions) => {
