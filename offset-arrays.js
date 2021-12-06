@@ -25,7 +25,7 @@ game.createArrayDefinitions = (arrayExpressions) => {
 
     arrayExpressions.forEach(expression => {
         
-        let { nameArray, valueArray } = game.parsingArrayExpression(expression);
+        let { nameArray, value: valueArray } = game.parsingArrayExpression(expression);
         objectOfArrayDefinitions[nameArray] = valueArray;
 
     });
@@ -71,6 +71,14 @@ game.findResultOfExpression = (expression, arrayDefinitions) => {
     }
     
     return arrayDefinitions[nameArray][index];
+
+};
+
+game.findNumberOfAnArray = (arrayExpressions, finalExpression) => {
+
+    const arrayDefinitions = game.createArrayDefinitions(arrayExpressions); 
+
+    return game.findResultOfExpression(finalExpression, arrayDefinitions);
 
 };
 
