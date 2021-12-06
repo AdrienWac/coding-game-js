@@ -1,42 +1,42 @@
 const game = require('../van_ecks_sequence');
 
 const datasProvider = [
-//     { 
-//         message: `Not seen`,
-//         input: `0
-// 2`,
-//         output: 0
-//     },
-//     {
-//         message: `Seen Before`,
-//         input: `0
-// 3`,
-//         output: 1
-//     },
-//     {
-//         message: `A little long`,
-//         input: `1
-// 58`,
-//         output: 11
-//     },
-//     {
-//         message: `Longer`,
-//         input: `10
-// 5692`,
-//         output: 7
-//     },
+    { 
+        message: `Not seen`,
+        input: `0
+2`,
+        output: 0
+    },
+    {
+        message: `Seen Before`,
+        input: `0
+3`,
+        output: 1
+    },
+    {
+        message: `A little long`,
+        input: `1
+58`,
+        output: 11
+    },
+    {
+        message: `Longer`,
+        input: `10
+5692`,
+        output: 7
+    },
     {
         message: `A little stress`,
         input: `1
 56804`,
         output: 29
     },
-//     {
-//         message: `Stress Check`,
-//         input: `0
-// 1000000`,
-//         output: 34143
-//     }
+    {
+        message: `Stress Check`,
+        input: `0
+1000000`,
+        output: 34143
+    }
     
 ];
 

@@ -32,25 +32,23 @@ const game = {};
 // TODO Ne pas faire récursivité car la stack est complète
 game.generateSequence = (N, hashMap, moves, A1, sequence) => {
 
-    if (moves == 0) {
-        return sequence;
+    while (moves >= 0) {
+
+        sequence.push(A1);
+
+        let isInBackup = hashMap.has(A1);
+
+        let currentPosition = N - moves;
+
+        let lastIndex = isInBackup ? hashMap.get(A1) : 0;
+
+        hashMap.set(A1, currentPosition);
+
+        A1 = isInBackup ? currentPosition - lastIndex : lastIndex;
+
+        moves--;
+
     }
-
-    sequence.push(A1);
-
-    let isInBackup = hashMap.has(A1);
-
-    let currentPosition = N - moves;
-
-    let lastIndex = isInBackup ? hashMap.get(A1) : 0;
-
-    hashMap.set(A1, currentPosition);
-
-    A1 = isInBackup ? currentPosition - lastIndex : lastIndex;
-
-    moves--;
-
-    return game.generateSequence(N, hashMap, moves, A1, sequence);
 
 };
 
@@ -60,7 +58,7 @@ game.getValueInSequence = (A1, N) => {
     let hashMap = new Map();
     let sequence = [];
 
-    sequence = game.generateSequence(N, hashMap, moves, A1, sequence);
+    game.generateSequence(N, hashMap, moves, A1, sequence);
 
     return sequence[N-1];
 };
