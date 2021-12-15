@@ -240,3 +240,56 @@ Sortie
 ....................
 ....................
 ....................
+
+
+
+MAIN
+Pour chaque ligne du ciel
+    
+    FlagCalculP3 = false
+
+    Si La ligne a t'elle une asteroid (ligne de ciel)
+        Positions Asteroide à T1 += Extraire asteroid(Y, ligne du ciel) pour T1
+        FlagCalculP3 = true
+    
+    Si La ligne a t'elle une asteroid (ligne de ciel)
+        Positions Asteroide à T2 = Extraire asteroid(Y, ligne du ciel) pour T2
+        FlagCalculP3 = true
+
+    Si FlagCalculP3 == true
+        Positions Asteroide à T3 += Calcul Position à T3 (P1, P2, P3, T1, T2, T3)
+
+Fin Pour
+Afficher ciel à T3(P3, H, W)
+
+
+La ligne a t'elle une asteroid (ligne de ciel)
+    Recherche une lettre de l'alphabet dans la ligne de ciel
+
+Extraire asteroid(Y, ligne de ciel)
+    On initialise un Map new Map()
+    Extrait les lettres d'alphabet présent dans la ligne de ciel
+    Pour chaque lettre extraite 
+        On ajoute au Map la position de la lettre => Map.set('A', [indexOf(A), Y])
+    Puis on retourne le map
+
+
+Calculer position à T3
+    On initialise un Map new Map()
+    Pour chaque asteroid qui est dans P1 & P2 mais pas encore dans P3
+        V = calculer la vitesse d'une asteroid(P2[Lettre asteroid], P1[Lettre asteroid], T2, T1)
+        Calculer la position à T3 d'une asteroid (T3, T2, V, P2[Lettre asteroid])
+        On ajoute au Map la position de la lettre => Map.set('A', Tableau position à T3 de l'asteroid)
+    Fin
+
+
+Calculer la vitesse d'une asteroid
+    (Positon à T2 - Position à T1) / (T2 - T1) = Vitesse de déplacement pour un 1T  
+
+
+Calculer la position à T3 d'une asteroid
+    Temp de déplacement = T3 - T2
+    Calcul deplacement  = Vitesse de déplacement pour 1T * Temp de déplacement
+    Position asteroid à T3 = Position asteroid à T2 + Calcul de déplacement
+
+ 
