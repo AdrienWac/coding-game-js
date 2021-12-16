@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest reverse-minesweeper",
-    "test:helpers": "./node_modules/.bin/jest helpers --runInBand",
+    "test:helpers": "./node_modules/.bin/jest helpers -t=\"Calcul intersection of two objects using the keys for comparison\" --runInBand",
     "test:reverseMinesweeper": "./node_modules/.bin/jest -t=\"Display the grid as it appears if you win the game\" --runInBand",
     "test:offsetArrays": "./node_modules/.bin/jest offset-arrays -t=\"Find number at indice 'i' for given array\" --runInBand",
-    "test:vanEcksSequence": "./node_modules/.bin/jest van_ecks_sequence -t=\"Get value at given position in sequence\" --runInBand"
+    "test:vanEcksSequence": "./node_modules/.bin/jest van_ecks_sequence -t=\"Get value at given position in sequence\" --runInBand",
+    "test:asteroids": "./node_modules/.bin/jest asteroids -t=\"Display sky with asteroids position at T3\" --runInBand"
   },
   "repository": {
     "type": "git",

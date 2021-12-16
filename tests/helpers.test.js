@@ -32,3 +32,20 @@ describe(`Create copy of an array`, () => {
     });
 
 });
+
+describe(`Calcul intersection of two objects using the keys for comparison`, () => {
+
+    test('with map', () => {
+
+        const firstObject = new Map([['A', [0, 0]], ['J', [1, 1]], ['K', [18, 1]], ['Z', [6, 1]]]);
+        const secondObject = new Map([['A', [1, 0]], ['J', [2, 1]], ['K', [20, 1]]]);
+
+        
+        let arrayIntersectionKey = helpers.mapIntersectKey(firstObject, secondObject);
+
+
+        expect(arrayIntersectionKey).toEqual(['A', 'J', 'K']);
+
+    });
+
+});

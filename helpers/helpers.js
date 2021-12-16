@@ -12,4 +12,13 @@ helpers.deepCopy = (array) => {
 
 }
 
+helpers.mapIntersectKey = (firstMap, secondMap) => {
+
+    const firstObject = Object.fromEntries(firstMap);
+    const secondObject = Object.fromEntries(secondMap);
+
+    return Object.keys(firstObject).filter(key => key in secondObject);
+
+}
+
 module.exports = helpers;
